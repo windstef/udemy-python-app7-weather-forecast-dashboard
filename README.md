@@ -32,3 +32,45 @@ But for this app an image is available 'App+Design.png'
 7. Note: when the user changes the slider (Forecast days)
 Python executes the code again from top to bottom.
 8. For this part the data are dummy. To be fetched from the Weather Forecast API.
+
+
+# Section 33: Day 33: App 7 - Build a Weather Forecast Dashboard | Part 2
+
+## 287. Getting Raw Forecast Data
+
+### Keynotes
+
+1. We write the frontend and then we write the backend.
+2. You should keep the frontend in mind.
+So try to find out what input is the user sending
+from the frontend, what kind of input data:
+3. Place: city, town name.
+4. Forecast days: 1 -5
+5. kind: temperature or sky
+6. the 'backend.py' holds the backend logic.
+7. The function 'get_data' defined in the backend should get the values
+of (place, days, kind) and it should query the actual forecast values
+from the weather API.
+8. Weather forecast API: https://openweathermap.org/api
+9. account: windstef@gmail.com / op5nWe@th5Rm1p
+10. This API gives you free data for five days, service: 5 Day / 3 Hour Forecast
+11. https://openweathermap.org/forecast5 > 'Built-in API request by city name'
+12. API call
+`api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}`
+13. It will give us JSON data for any city,
+and these data are temperature data and other sky conditions, such as rain
+or sun, et cetera.
+14. This will be the data for that city for the next five days at an interval of three hours.
+15. API key: 785c76436d5102b49ace6d03adb4574a
+16. example request: http://api.openweathermap.org/data/2.5/forecast?q=Tokyo&appid=785c76436d5102b49ace6d03adb4574a
+17. response data: weather data for at an interval of three hours.
+
+
+## 288. Filtering Forecast Data
+
+### Keynotes
+
+1. response json data
+2. list of 40 items, each of 3 times interval
+3. filter data by forecast days: 8*forecast_days
+4. filter data by kind (Temperature / Sky)
