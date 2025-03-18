@@ -74,3 +74,22 @@ or sun, et cetera.
 2. list of 40 items, each of 3 times interval
 3. filter data by forecast days: 8*forecast_days
 4. filter data by kind (Temperature / Sky)
+
+
+## 289. Add Sky Conditions
+
+### Keynotes
+
+1. For temperature data: plot the values vs 3-hour interval
+2. For sky data: show the corresponding images for each 3-hour interval
+3. Remove the if conditions on Temperature/Sky from the backend function
+'get_data' and return just the filtered data.
+4. Add the conditions in main callind the 'get_data' with args place, days
+5. images: 1 per conditions,
+e.g. for 1 day (8 3-hour intervals)
+['Rain', 'Rain', 'Rain', 'Rain', 'Clouds', 'Clouds', 'Clear', 'Clear']
+to:
+['images/rain.png', 'images/rain.png', 'images/rain.png', 'images/rain.png', 
+'images/cloud.png', 'images/cloud.png', 'images/clear.png', 'images/clear.png']
+6. To translate the sky conditions into images paths use list comprehension
+e.g. [images[condition] for condition in strings]
