@@ -126,3 +126,28 @@ what the problem is with the app.
 ## 291. Student Project: Solution
 file:
 _290-Current+Source+Code.zip_
+
+
+
+## Deploy as web app in streamlit cloud platform
+
+https://share.streamlit.io/
+
+# How to run:
+# terminal:
+# streamlit run web.py
+
+# generate the requirements.txt file via command:
+# pip freeze > requirements.txt
+
+
+# Q. what is requirements.txt?
+
+# This is a file which will be uploaded to the server
+# where we host this web app.
+# So that server should know
+# all the Python libraries the server needs to install
+# in order to run the web app correctly.
+
+# show the list of those packages in the command line:
+# pip freeze
