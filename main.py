@@ -16,6 +16,7 @@ if place:
     try:
         # Get the temperature/sky data
         filtered_data = get_data(place=place, forecast_days=days)
+        st.subheader(f"{option} for the next {days} days in {place}")
 
         if option == "Temperature":
             temperatures = [dict["main"]["temp"] for dict in filtered_data]
@@ -32,8 +33,6 @@ if place:
             # print(sky_conditions)
             image_paths = [images[condition] for condition in sky_conditions]
             st.image(image_paths, width=115)
-
-        st.subheader(f"{option} for the next {days} days in {place}")
 
     except:
         st.subheader("Oh you entered a non-existing place.")

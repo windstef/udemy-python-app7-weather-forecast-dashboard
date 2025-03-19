@@ -105,6 +105,13 @@ with the Weather Forecast app.
 2. The first issue is that when the user enters a place,
 the graph shows the temperatures in degree Celsius, but multiplied by 10.
 
+**Attention**:
+The temperature scale is by default in Kelvin scale.
+To change the units of measurement in Celcius we should add the query parameter
+units to hold the value metric as described in the
+https://openweathermap.org/forecast5#data
+
+
 3. The second issue is that if the user enters a place name
 which does not exist, for example, this name, Tiranax, and they press enter,
 the user will see this error.
@@ -114,3 +121,8 @@ what the problem is with the app.
 
 4. The task is to display here a message which says,
 "Oh you entered a non-existing place."
+
+
+## 291. Student Project: Solution
+file:
+_290-Current+Source+Code.zip_
