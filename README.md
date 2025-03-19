@@ -93,3 +93,24 @@ to:
 'images/cloud.png', 'images/cloud.png', 'images/clear.png', 'images/clear.png']
 6. To translate the sky conditions into images paths use list comprehension
 e.g. [images[condition] for condition in strings]
+
+
+## 290. Student Project: Fix the Weather Forecast App
+
+### Keynotes
+
+1. This exercise consists of fixing two issues
+with the Weather Forecast app.
+
+2. The first issue is that when the user enters a place,
+the graph shows the temperatures in degree Celsius, but multiplied by 10.
+
+3. The second issue is that if the user enters a place name
+which does not exist, for example, this name, Tiranax, and they press enter,
+the user will see this error.
+You shouldn't show errors, code errors to the users.
+You should display them messages to explain them in simple words,
+what the problem is with the app.
+
+4. The task is to display here a message which says,
+"Oh you entered a non-existing place."
